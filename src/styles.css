@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+*{  
+    background-color: rgb(26, 26, 64);
+    color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  }

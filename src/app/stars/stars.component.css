@@ -1,0 +1,16 @@
+*{  
+  margin: 0;
+}
+#star_list {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+#star_group {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+h5 {
+  text-align: justify;
+}

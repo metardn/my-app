@@ -1,0 +1,9 @@
+<div id= "star_list" class="list-group list-group-flush">
+    <div *ngFor="let star of star_list" id="star_group">
+        <h2>{{ star.name | uppercase }}</h2>
+        <h3>{{ star.astronomical_name }}</h3>
+        <br>
+        <h5>{{ star.description }}</h5>
+    </div>
+</div>
+
