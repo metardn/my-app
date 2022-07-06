@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GalleryComponent } from './gallery/gallery.component';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { StarsComponent } from './stars/stars.component';
 
 const routes: Routes = [
 {
-  path:'home', component:HomeComponent
+  path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomeModule )
 },
 {
-  path:'profile', component:ProfileComponent
+  path: 'profile', loadChildren: () => import('./profile/profile.module').then( m => m.ProfileModule )
 },
 {
-  path:'gallery', component:GalleryComponent
+  path: 'gallery', loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryModule )
 },
 {
-  path:'stars', component:StarsComponent
+  path: 'stars', loadChildren: () => import('./stars/stars.module').then( m => m.StarsModule )
 },
 {
-  path:'',redirectTo:'home', pathMatch:'full'
+  path: '',redirectTo:'home', pathMatch:'full'
 }
 
 ];
