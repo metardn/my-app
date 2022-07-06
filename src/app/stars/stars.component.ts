@@ -9,7 +9,7 @@ import { StarsService } from '../stars.service';
 export class StarsComponent implements OnInit {
   public star_list : any;
   constructor(private stars:StarsService) { 
-    console.log(this.stars.getData())
+    // console.log(this.stars.getData())
     this.star_list = this.stars.getData()
   }
 
