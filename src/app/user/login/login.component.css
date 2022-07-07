@@ -1,0 +1,32 @@
+.login-card {
+    padding-top: 5%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input {
+    background-color: rgb(26, 26, 64);
+    color: white;
+}
+
+input:focus {
+    background-color: rgb(40, 40, 98);
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+button {
+    background-color: rgb(26, 26, 64);
+    border-color: white;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(26, 26, 64);
+    transition: .3s;
+}
