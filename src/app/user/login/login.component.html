@@ -4,6 +4,7 @@
     <form class="mt-5 p-5">
       <input [(ngModel)]="loginUserData.username" name="username" type="username" class="form-control my-3" placeholder="Username">
       <input [(ngModel)]="loginUserData.password"  name="password" type="password" class="form-control my-3" placeholder="Password">
+      <p *ngIf="err">Invalid Username or Password</p>
       <button (click)="loginUser()" type="button" class="btn font-weight-bold mt-5">LOGIN</button>
     </form>
   </div>

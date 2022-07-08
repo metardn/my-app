@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     "username" : "",
     "password" : ""
   }
+  err : any
   
   constructor(private auth: AuthService, 
     private router: Router,
@@ -31,7 +32,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/dashboard'])
         this.shared.setUserData(res)
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        this.err = err
+      }
     )
   }
 
