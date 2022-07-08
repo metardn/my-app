@@ -19,7 +19,6 @@ export class TestimonialComponent implements OnInit {
   getDataTestimonial () {
     this.testimonial.getData().subscribe(res => {
     this.testimonials = res
-    console.log(res)
     })
   }
 
