@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { AuthService } from './user/auth.service';
 import { AuthGuard } from './user/auth.guard';
 
 @NgModule({
@@ -15,7 +16,7 @@ import { AuthGuard } from './user/auth.guard';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,10 @@ export class LoginComponent implements OnInit {
     "password" : ""
   }
   
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, 
+    private router: Router,
+    private shared: SharedService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +29,7 @@ export class LoginComponent implements OnInit {
         console.log(res)
         localStorage.setItem('token', res.token)
         this.router.navigate(['/dashboard'])
+        this.shared.setUserData(res)
       },
       err => console.log(err)
     )

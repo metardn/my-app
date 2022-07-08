@@ -44,6 +44,10 @@ hr {
   margin: auto;
 }
 
+img {
+  max-width: 200px;
+}
+
 table tr th {
   font-size: 17px;
   font-weight: normal;

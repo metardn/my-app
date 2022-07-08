@@ -10,34 +10,34 @@
       </ul>
     </nav>
   </div>
-  <div class="col pl-3">
-    <img src="" alt="">
-    <div>
+  <div class="col pl-3 ml-5">
+    <img [src]="userData.image" class="rounded-circle img-fluid border mb-3">
+    <div class="mt-5">
       <table>
         <tr>
           <th class="pr-5">Username</th>
           <th class="pr-5">:</th>
-          <th class="">user</th>
+          <th class="">{{ userData.username }}</th>
         </tr>
         <tr>
           <th>Email</th>
           <th>:</th>
-          <th>email.com</th>
+          <th>{{ userData.email }}</th>
         </tr>
         <tr>
           <th>First Name</th>
           <th>:</th>
-          <th>name1</th>
+          <th>{{ userData.firstName }}</th>
         </tr>
         <tr>
           <th>Last Name</th>
           <th>:</th>
-          <th>name2</th>
+          <th>{{ userData.lastName }}</th>
         </tr>
         <tr>
           <th>Gender</th>
           <th>:</th>
-          <th>Woman</th>
+          <th class="text-capitalize">{{ userData.gender }}</th>
         </tr>
       </table>
     </div>
